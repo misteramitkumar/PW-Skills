@@ -1,0 +1,92 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #7fffee;
+    border-radius: 30px;
+    height: 100vh;
+    text-align: center;
+    padding-top: 10px;
+    line-height: 3em;
+}
+
+.heading{
+    font-size: 40px;
+    font-weight: 600;
+}
+
+.size-text{
+    display: none;
+    /* visibility: hidden; */
+    font-size: 22px;
+}
+
+/* Media Queries can also require operators like: "and" , "only" */
+/* Media Queries using max-witdh property :- will trigger when max witdh is set*/
+/* Media Queries using min-witdh property :- will trigger when min witdh is set*/
+/* Media Queries using min-witdh and max-witdh property :- will trigger between this range*/
+
+@media screen and (max-width: 1440px) {
+    .container {
+      background-color: #008000;
+    }
+    .biggest{
+        display: block;
+        /* visibility: visible; */
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .container {
+      background-color: #9b7002;
+    }
+
+    .biggest{
+        display: none;
+        /* visibility: visible; */
+    }
+
+    .big{
+        display: block;
+        /* visibility: visible; */
+    }
+  }
+
+  @media screen and (max-width: 768px) {
+    .container {
+      background-color: #04e2ff;
+    }
+
+    .biggest + .big{
+        display: none;
+        /* visibility: visible; */
+    }
+
+    .small{
+        display: block;
+        /* visibility: visible; */
+    }
+  }
+
+  @media screen and (max-width: 425px) {
+    .container {
+      background-color: #af0b0b;
+    }
+
+    .biggest + .big + .small{
+        display: none;
+        /* visibility: visible; */
+    }
+
+    .smallest{
+        display: block;
+        /* visibility: visible; */
+    }
+  }
